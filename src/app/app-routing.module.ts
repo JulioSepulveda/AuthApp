@@ -20,8 +20,11 @@ const routes: Routes = [
   },
 ];
 
+/* Solución para que funcione correctamente para servidores antiguos */
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    useHash: true
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
